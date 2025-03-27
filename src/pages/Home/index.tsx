@@ -10,6 +10,7 @@ import {
   StemSubtitle,
   SubjectsContainer,
   Subject,
+  StemContent,
 } from "../../components/ContentBlock/styles";
 
 const Contact = lazy(() => import("../../components/ContactForm"));
@@ -45,19 +46,21 @@ const Home = () => {
         id="intro"
       />
       <StemSection>
-        <StemTitle>
-          Guided by the Standards of the World's Leading STEM Institutions.
-        </StemTitle>
-        <StemSubtitle>
-          Personalized STEM Lessons at any level for $60/hour in:
-        </StemSubtitle>
-        <SubjectsContainer>
-          {subjects.map((subject, index) => (
-            <Subject key={index} onClick={() => window.open('https://docs.google.com/forms/d/e/1FAIpQLSfI4a1EKD2DU-VsxAHU7ME0SbU69dRTLg7AiRF7V1IBpE4htg/viewform', '_blank')}>
-              {subject}
-            </Subject>
-          ))}
-        </SubjectsContainer>
+        <StemContent>
+          <StemTitle>
+            Guided by the Standards of the World's Leading STEM Institutions.
+          </StemTitle>
+          <StemSubtitle>
+            Personalized STEM Lessons at any level for $60/hour in:
+          </StemSubtitle>
+          <SubjectsContainer>
+            {subjects.map((subject, index) => (
+              <Subject key={index}>
+                {subject}
+              </Subject>
+            ))}
+          </SubjectsContainer>
+        </StemContent>
       </StemSection>
       <MiddleBlock
         title={MiddleBlockContent.title}

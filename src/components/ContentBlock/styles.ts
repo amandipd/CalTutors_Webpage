@@ -73,51 +73,65 @@ export const ButtonWrapper = styled("div")`
 `;
 
 export const StemSection = styled("section")`
-  padding: 5rem 0;
+  padding: 1rem 0;
   text-align: center;
-  background: #fff;
-  width: 100%;
+  background: #fafafa;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+`;
+
+export const StemContent = styled("div")`
   max-width: 80%;
   margin: 0 auto;
 `;
 
 export const StemTitle = styled("h2")`
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 700;
   color: #18216d;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   text-align: center;
   line-height: 1.2;
+  white-space: nowrap;
+  @media only screen and (max-width: 768px) {
+    font-size: 1.5rem;
+    white-space: normal;
+  }
 `;
 
 export const StemSubtitle = styled("p")`
   font-size: 1.25rem;
   color: #18216d;
-  margin-bottom: 3rem;
+  margin-bottom: 1.5rem;
   text-align: center;
 `;
 
 export const SubjectsContainer = styled("div")`
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-  margin-top: 2rem;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 1rem;
   padding: 0 1rem;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
 `;
 
 export const Subject = styled("div")`
-  font-size: 1.1rem;
+  font-size: 0.9rem;
   color: #18216d;
-  padding: 0.75rem 1.5rem;
+  padding: 0.5rem 1rem;
   border-radius: 4px;
   background: #F5F5F5;
-  transition: all 0.3s ease;
-  cursor: pointer;
   white-space: nowrap;
-
-  &:hover {
-    background: #E6E6E6;
-    transform: translateY(-2px);
-  }
+  user-select: none;
 `;
