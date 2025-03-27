@@ -39,7 +39,7 @@ const Home = () => {
         id="about"
       />
       <ContentBlock
-        direction="right"
+        direction="left"
         title={WhoWeAre.title}
         content={WhoWeAre.text}
         icon="who_we_are.png"

@@ -1,38 +1,45 @@
-import { Row } from "antd";
 import styled from "styled-components";
+import { Row } from "antd";
+
+interface StyledRowProps {
+  direction: "left" | "right";
+}
 
 export const ContentSection = styled("section")`
   position: relative;
-  padding: 10rem 0 8rem;
+  padding: 4rem 0;
 
-  @media only screen and (max-width: 1024px) {
-    padding: 4rem 0 4rem;
+  &:not(:last-child) {
+    margin-bottom: 2rem;
   }
 `;
 
-export const Subtitle = styled("h2")`
-  font-style: bold;
-  color: black;
-  font-size: 22px;
-  line-height: 1.5rem;
-  margin: 0.5rem 0 2rem 0;
+export const Subtitle = styled("h6")`
+  font-size: 1.2rem;
+  line-height: 1.5;
+  margin: 0.5rem 0;
 `;
 
 export const Content = styled("p")`
-  margin: 1.5rem 0 2rem 0;
+  margin: 1rem 0;
+  font-size: 15px;
+  line-height: 1.6;
 `;
 
-export const StyledRow = styled(Row)`
-  flex-direction: ${({ direction }: { direction: string }) =>
-    direction === "left" ? "row" : "row-reverse"};
+export const StyledRow = styled(Row)<StyledRowProps>`
+  flex-direction: ${props => (props.direction === "left" ? "row" : "row-reverse")};
+
+  @media only screen and (max-width: 768px) {
+    flex-direction: column;
+  }
 `;
 
 export const ContentWrapper = styled("div")`
   position: relative;
   max-width: 540px;
 
-  @media only screen and (max-width: 575px) {
-    padding-top: 4rem;
+  @media only screen and (max-width: 768px) {
+    max-width: 100%;
   }
 `;
 
@@ -46,13 +53,12 @@ export const MinTitle = styled("h6")`
   font-size: 15px;
   line-height: 1rem;
   padding: 0.5rem 0;
-  text-transform: uppercase;
-  color: #000;
-  font-family: "Motiva Sans Light", sans-serif;
 `;
 
 export const MinPara = styled("p")`
-  font-size: 20px;
+  font-size: 13px;
+  line-height: 1.5;
+  margin: 0.5rem 0;
 `;
 
 export const ButtonWrapper = styled("div")`
@@ -60,11 +66,8 @@ export const ButtonWrapper = styled("div")`
   justify-content: space-between;
   max-width: 100%;
 
-  @media screen and (min-width: 1024px) {
-    max-width: 100%;
-  }
-
-  button:last-child {
-    margin-left: 0px;
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    gap: 0.5rem;
   }
 `;

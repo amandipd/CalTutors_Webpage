@@ -25,7 +25,7 @@ export const Styles = createGlobalStyle`
     body {
         margin:0;
         padding:0;
-        padding-top: 80px;
+        padding-top: 60px;
         border: 0;
         outline: 0;
         background: #fff;
@@ -44,7 +44,7 @@ export const Styles = createGlobalStyle`
         transition: all 0.3s ease-in-out;  
         outline: none;
         width: 100%;  
-        padding: 1rem 1.25rem;
+        padding: 0.75rem 1rem;
 
         :focus-within {
             background: none;
@@ -60,22 +60,24 @@ export const Styles = createGlobalStyle`
     h6 {
         font-family: 'Motiva Sans Bold', serif;
         color: #18216d;
-        font-size: 56px;
-        line-height: 1.18;
+        font-size: 42px;
+        line-height: 1.2;
+        margin: 0.5rem 0;
 
         @media only screen and (max-width: 890px) {
-          font-size: 47px;
+          font-size: 36px;
         }
       
         @media only screen and (max-width: 414px) {
-          font-size: 32px;
+          font-size: 28px;
         }
     }
 
     p {
         color: #18216d;
-        font-size: 21px;        
-        line-height: 1.41;
+        font-size: 16px;        
+        line-height: 1.5;
+        margin: 0.5rem 0;
     }
 
     h1 {
@@ -104,7 +106,7 @@ export const Styles = createGlobalStyle`
         display: flex;
         flex-direction: column;
         text-align: left;
-        padding-top: 1.5rem;
+        padding-top: 1rem;
     }
 
     .ant-drawer-content-wrapper {
