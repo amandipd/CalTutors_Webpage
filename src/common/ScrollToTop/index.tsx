@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useState } from "react";
-import { SvgIcon } from "../SvgIcon";
+import PlaceholderImage from "../PlaceholderImage";
 import { ScrollUpContainer } from "./styles";
 
 const ScrollToTop = () => {
@@ -33,7 +33,7 @@ const ScrollToTop = () => {
 
   return (
     <ScrollUpContainer onClick={scrollUp} show={showScroll}>
-      <SvgIcon src="scroll-top.svg" width="20px" height="20px" />
+      <PlaceholderImage width="20px" height="20px" alt="Scroll to top" />
     </ScrollUpContainer>
   );
 };

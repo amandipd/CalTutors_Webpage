@@ -25,6 +25,7 @@ export const Styles = createGlobalStyle`
     body {
         margin:0;
         padding:0;
+        padding-top: 80px;
         border: 0;
         outline: 0;
         background: #fff;

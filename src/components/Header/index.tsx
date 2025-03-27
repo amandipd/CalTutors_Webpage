@@ -2,8 +2,7 @@ import { useState } from "react";
 import { Row, Col, Drawer } from "antd";
 import { withTranslation, TFunction } from "react-i18next";
 import Container from "../../common/Container";
-import { SvgIcon } from "../../common/SvgIcon";
-import { Button } from "../../common/Button";
+import PlaceholderImage from "../../common/PlaceholderImage";
 import {
   HeaderSection,
   LogoContainer,
@@ -14,6 +13,7 @@ import {
   Label,
   Outline,
   Span,
+  LogoText,
 } from "./styles";
 
 const Header = ({ t }: { t: TFunction }) => {
@@ -33,22 +33,20 @@ const Header = ({ t }: { t: TFunction }) => {
     };
     return (
       <>
-        <CustomNavLinkSmall onClick={() => scrollTo("about")}>
-          <Span>{t("About")}</Span>
+        <CustomNavLinkSmall onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+          <Span>Home</Span>
+        </CustomNavLinkSmall>
+        <CustomNavLinkSmall onClick={() => scrollTo("intro")}>
+          <Span>Testimonials</Span>
         </CustomNavLinkSmall>
         <CustomNavLinkSmall onClick={() => scrollTo("who-we-are")}>
-          <Span>{t("Who We are")}</Span>
+          <Span>Team</Span>
         </CustomNavLinkSmall>
         <CustomNavLinkSmall onClick={() => scrollTo("product")}>
-          <Span>{t("Product")}</Span>
+          <Span>How It Works</Span>
         </CustomNavLinkSmall>
-        <CustomNavLinkSmall
-          style={{ width: "180px" }}
-          onClick={() => scrollTo("contact")}
-        >
-          <Span>
-            <Button>{t("Contact")}</Button>
-          </Span>
+        <CustomNavLinkSmall onClick={() => scrollTo("about")}>
+          <Span>Pricing</Span>
         </CustomNavLinkSmall>
       </>
     );
@@ -57,9 +55,10 @@ const Header = ({ t }: { t: TFunction }) => {
   return (
     <HeaderSection>
       <Container>
-        <Row justify="space-between">
+        <Row justify="space-between" align="middle">
           <LogoContainer to="/" aria-label="homepage">
-            <SvgIcon src="logo.svg" width="101px" height="64px" />
+            <PlaceholderImage width="40px" height="40px" alt="CalTutors Logo" />
+            <LogoText>CalTutors</LogoText>
           </LogoContainer>
           <NotHidden>
             <MenuItem />

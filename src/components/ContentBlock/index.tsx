@@ -4,7 +4,7 @@ import { withTranslation } from "react-i18next";
 
 import { ContentBlockProps } from "./types";
 import { Button } from "../../common/Button";
-import { SvgIcon } from "../../common/SvgIcon";
+import PlaceholderImage from "../../common/PlaceholderImage";
 import {
   ContentSection,
   Content,
@@ -37,7 +37,7 @@ const ContentBlock = ({
 
   return (
     <ContentSection>
-      <Fade direction={direction} triggerOnce>
+      <Fade direction={direction === "right" ? "right" : "left"}>
         <StyledRow
           justify="space-between"
           align="middle"
@@ -45,7 +45,7 @@ const ContentBlock = ({
           direction={direction}
         >
           <Col lg={11} md={11} sm={12} xs={24}>
-            <SvgIcon src={icon} width="100%" height="100%" />
+            <PlaceholderImage width="100%" height="400px" alt={title} />
           </Col>
           <Col lg={11} md={11} sm={11} xs={24}>
             <ContentWrapper>
@@ -60,17 +60,17 @@ const ContentBlock = ({
                         item: {
                           color?: string;
                           title: string;
-                          url?: string; // Ensure the URL is included
+                          url?: string;
                         },
                         id: number
                       ) => {
                         return (
                           <a
                             key={id}
-                            href={item.url} // Use the URL from the JSON
-                            target="_blank" // Open in a new tab
-                            rel="noopener noreferrer" // Security best practice
-                            style={{ textDecoration: "none" }} // Optional: Remove underline
+                            href={item.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            style={{ textDecoration: "none" }}
                           >
                             <Button color={item.color}>{t(item.title)}</Button>
                           </a>
@@ -93,10 +93,10 @@ const ContentBlock = ({
                         ) => {
                           return (
                             <Col key={id} span={11}>
-                              <SvgIcon
-                                src={item.icon}
+                              <PlaceholderImage
                                 width="60px"
                                 height="60px"
+                                alt={item.title}
                               />
                               <MinTitle>{t(item.title)}</MinTitle>
                               <MinPara>{t(item.content)}</MinPara>
