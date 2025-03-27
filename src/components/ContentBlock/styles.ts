@@ -76,6 +76,9 @@ export const StemSection = styled("section")`
   padding: 5rem 0;
   text-align: center;
   background: #fff;
+  width: 100%;
+  max-width: 80%;
+  margin: 0 auto;
 `;
 
 export const StemTitle = styled("h2")`
@@ -84,6 +87,7 @@ export const StemTitle = styled("h2")`
   color: #18216d;
   margin-bottom: 2rem;
   text-align: center;
+  line-height: 1.2;
 `;
 
 export const StemSubtitle = styled("p")`
@@ -99,6 +103,7 @@ export const SubjectsContainer = styled("div")`
   flex-wrap: wrap;
   gap: 1.5rem;
   margin-top: 2rem;
+  padding: 0 1rem;
 `;
 
 export const Subject = styled("div")`
@@ -109,6 +114,7 @@ export const Subject = styled("div")`
   background: #F5F5F5;
   transition: all 0.3s ease;
   cursor: pointer;
+  white-space: nowrap;
 
   &:hover {
     background: #E6E6E6;

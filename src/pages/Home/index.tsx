@@ -44,6 +44,21 @@ const Home = () => {
         icon="developer.svg"
         id="intro"
       />
+      <StemSection>
+        <StemTitle>
+          Guided by the Standards of the World's Leading STEM Institutions.
+        </StemTitle>
+        <StemSubtitle>
+          Personalized STEM Lessons at any level for $60/hour in:
+        </StemSubtitle>
+        <SubjectsContainer>
+          {subjects.map((subject, index) => (
+            <Subject key={index} onClick={() => window.open('https://docs.google.com/forms/d/e/1FAIpQLSfI4a1EKD2DU-VsxAHU7ME0SbU69dRTLg7AiRF7V1IBpE4htg/viewform', '_blank')}>
+              {subject}
+            </Subject>
+          ))}
+        </SubjectsContainer>
+      </StemSection>
       <MiddleBlock
         title={MiddleBlockContent.title}
         content={MiddleBlockContent.text}
@@ -64,7 +79,6 @@ const Home = () => {
         icon="who_we_are.png"
         id="who-we-are"
       />
-
       <ContentBlock
         direction="left"
         title={ProductContent.title}
@@ -77,24 +91,6 @@ const Home = () => {
         content={ContactContent.text}
         id="contact"
       />
-
-      <StemSection>
-        <Container>
-          <StemTitle>
-            Guided by the Standards of the World's Leading STEM Institutions.
-          </StemTitle>
-          <StemSubtitle>
-            Personalized STEM Lessons at any level for $60/hour in:
-          </StemSubtitle>
-          <SubjectsContainer>
-            {subjects.map((subject, index) => (
-              <Subject key={index} onClick={() => window.open('https://docs.google.com/forms/d/e/1FAIpQLSfI4a1EKD2DU-VsxAHU7ME0SbU69dRTLg7AiRF7V1IBpE4htg/viewform', '_blank')}>
-                {subject}
-              </Subject>
-            ))}
-          </SubjectsContainer>
-        </Container>
-      </StemSection>
     </Container>
   );
 };
