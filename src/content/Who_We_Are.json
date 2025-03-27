@@ -1,0 +1,42 @@
+{
+  "title": "Genuine Experiences, Learning, and Growth",
+  "text": "Tutoring often feels more like a business transaction rather than a genuine learning experience. As a group of College Students, we are changing that by focusing on personal connections. Our team understands your journey because we’ve been there ourselves. We’re students too—just a little further along the road. Whether we’re studying, working out, or pursuing hobbies like hiking or sports, we share the same drive for growth and discovery. At CalTutors, you’ll find more than tutors; you’ll find mentors, friends, and a support system dedicated to helping you thrive. Join us, and let’s grow together. 🌟.",
+  "tutors": [
+    {
+      "name": "Joshua Zhou",
+      "image": "path/to/joshua.jpg",
+      "school": "UC Berkeley | EECS + Applied Math",
+      "description": "College Math"
+    },
+    {
+      "name": "Skye Ruedas",
+      "image": "path/to/skye.jpg",
+      "school": "Caltech | Computer Science",
+      "description": "College Courses and College Counseling"
+    },
+    {
+      "name": "Prayag Gordy",
+      "image": "path/to/prayag.jpg",
+      "school": "Rice Graduate | Math + Statistics",
+      "description": "College Math"
+    },
+    {
+      "name": "Frida Moreno",
+      "image": "path/to/frida.jpg",
+      "school": "Caltech | Computer Science",
+      "description": "STEM"
+    },
+    {
+      "name": "Pearl Oyewole",
+      "image": "path/to/pearl.jpg",
+      "school": "Caltech | Computer Science",
+      "description": "AP Computer Science, Chemistry, Calculus"
+    },
+    {
+      "name": "Sam Matthews",
+      "image": "path/to/sam.jpg",
+      "school": "Caltech | Applied Math + Economics",
+      "description": "College Math, Physics, and Chem"
+    }
+  ]
+}
