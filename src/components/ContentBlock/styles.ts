@@ -71,3 +71,47 @@ export const ButtonWrapper = styled("div")`
     gap: 0.5rem;
   }
 `;
+
+export const StemSection = styled("section")`
+  padding: 5rem 0;
+  text-align: center;
+  background: #fff;
+`;
+
+export const StemTitle = styled("h2")`
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #18216d;
+  margin-bottom: 2rem;
+  text-align: center;
+`;
+
+export const StemSubtitle = styled("p")`
+  font-size: 1.25rem;
+  color: #18216d;
+  margin-bottom: 3rem;
+  text-align: center;
+`;
+
+export const SubjectsContainer = styled("div")`
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 2rem;
+`;
+
+export const Subject = styled("div")`
+  font-size: 1.1rem;
+  color: #18216d;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  background: #F5F5F5;
+  transition: all 0.3s ease;
+  cursor: pointer;
+
+  &:hover {
+    background: #E6E6E6;
+    transform: translateY(-2px);
+  }
+`;

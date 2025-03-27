@@ -14,6 +14,11 @@ import {
   Outline,
   Span,
   LogoText,
+  PhoneNumber,
+  ButtonGroup,
+  Button,
+  NavMenu,
+  RightSection
 } from "./styles";
 
 const Header = ({ t }: { t: TFunction }) => {
@@ -36,16 +41,16 @@ const Header = ({ t }: { t: TFunction }) => {
         <CustomNavLinkSmall onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
           <Span>Home</Span>
         </CustomNavLinkSmall>
-        <CustomNavLinkSmall onClick={() => scrollTo("intro")}>
+        <CustomNavLinkSmall onClick={() => scrollTo("who-we-are")}>
+          <Span>Who We Are</Span>
+        </CustomNavLinkSmall>
+        <CustomNavLinkSmall onClick={() => scrollTo("testimonials")}>
           <Span>Testimonials</Span>
         </CustomNavLinkSmall>
-        <CustomNavLinkSmall onClick={() => scrollTo("who-we-are")}>
-          <Span>Team</Span>
-        </CustomNavLinkSmall>
-        <CustomNavLinkSmall onClick={() => scrollTo("product")}>
+        <CustomNavLinkSmall onClick={() => scrollTo("how-it-works")}>
           <Span>How It Works</Span>
         </CustomNavLinkSmall>
-        <CustomNavLinkSmall onClick={() => scrollTo("about")}>
+        <CustomNavLinkSmall onClick={() => scrollTo("pricing")}>
           <Span>Pricing</Span>
         </CustomNavLinkSmall>
       </>
@@ -58,10 +63,23 @@ const Header = ({ t }: { t: TFunction }) => {
         <Row justify="space-between" align="middle">
           <LogoContainer to="/" aria-label="homepage">
             <PlaceholderImage width="40px" height="40px" alt="CalTutors Logo" />
-            <LogoText>CalTutors</LogoText>
+            <LogoText><span className="cal">Cal</span>Tutors</LogoText>
           </LogoContainer>
           <NotHidden>
-            <MenuItem />
+            <NavMenu>
+              <MenuItem />
+            </NavMenu>
+            <RightSection>
+              <PhoneNumber href="tel:+19092302186">
+                +1(909) 230 2186
+              </PhoneNumber>
+              <Button onClick={() => window.open('https://docs.google.com/forms/d/e/1FAIpQLSfI4a1EKD2DU-VsxAHU7ME0SbU69dRTLg7AiRF7V1IBpE4htg/viewform', '_blank')}>
+                Contact
+              </Button>
+              <Button primary onClick={() => window.open('https://calendly.com/caltutorsteam/30min', '_blank')}>
+                Schedule
+              </Button>
+            </RightSection>
           </NotHidden>
           <Burger onClick={toggleButton}>
             <Outline />
@@ -79,6 +97,13 @@ const Header = ({ t }: { t: TFunction }) => {
             </Label>
           </Col>
           <MenuItem />
+          <PhoneNumber href="tel:+19092302186">
+            +1(909) 230 2186
+          </PhoneNumber>
+          <ButtonGroup style={{ marginTop: "2rem", flexDirection: "column", gap: "1rem" }}>
+            <Button>Contact</Button>
+            <Button primary>Schedule</Button>
+          </ButtonGroup>
         </Drawer>
       </Container>
     </HeaderSection>
