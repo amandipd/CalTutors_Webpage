@@ -7,10 +7,10 @@ interface StyledRowProps {
 
 export const ContentSection = styled("section")`
   position: relative;
-  padding: 4rem 0;
+  padding: 2rem 0;
 
   &:not(:last-child) {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
   }
 `;
 
@@ -73,7 +73,7 @@ export const ButtonWrapper = styled("div")`
 `;
 
 export const StemSection = styled("section")`
-  padding: 1rem 0;
+  padding: 2rem 0;
   text-align: center;
   background: #fafafa;
   width: 100vw;
@@ -121,6 +121,7 @@ export const SubjectsContainer = styled("div")`
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
+  width: 100%;
   &::-webkit-scrollbar {
     display: none;
   }
@@ -134,4 +135,114 @@ export const Subject = styled("div")`
   background: #F5F5F5;
   white-space: nowrap;
   user-select: none;
+  min-width: fit-content;
+  text-align: center;
+  flex-shrink: 0;
+`;
+
+export const TestimonialsSection = styled("div")`
+  padding: 2rem 0;
+  background: #fff;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+`;
+
+export const TestimonialsGrid = styled("div")`
+  display: flex;
+  gap: 2rem;
+  max-width: 80%;
+  margin: 0 auto;
+  padding: 0 1rem;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  padding-bottom: 1rem;
+`;
+
+export const TestimonialCard = styled("div")`
+  background: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border: 1px solid #eee;
+  min-width: 300px;
+  max-width: 300px;
+  flex-shrink: 0;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+`;
+
+export const StarRating = styled("div")`
+  color: #FFD700;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+`;
+
+export const TestimonialName = styled("h4")`
+  font-size: 1.1rem;
+  color: #18216d;
+  margin: 0.5rem 0;
+`;
+
+export const TestimonialIdentifier = styled("span")`
+  font-size: 0.9rem;
+  color: #666;
+  font-style: italic;
+`;
+
+export const TestimonialText = styled("p")`
+  font-size: 0.95rem;
+  color: #333;
+  line-height: 1.6;
+  margin-top: 1rem;
+`;
+
+export const SectionTitle = styled("h2")`
+  font-size: 2rem;
+  color: #18216d;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-weight: 700;
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+`;
+
+export const ScrollButtons = styled("div")`
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+`;
+
+export const ScrollButton = styled("button")`
+  background: #F5F5F5;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #18216d;
+  font-size: 1.2rem;
+
+  &:hover {
+    background: #E6E6E6;
+  }
 `;

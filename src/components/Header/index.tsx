@@ -1,10 +1,10 @@
 import { useState } from "react";
 import { Row, Col, Drawer } from "antd";
 import { withTranslation, TFunction } from "react-i18next";
-import Container from "../../common/Container";
 import PlaceholderImage from "../../common/PlaceholderImage";
 import {
   HeaderSection,
+  HeaderContainer,
   LogoContainer,
   Burger,
   NotHidden,
@@ -59,32 +59,30 @@ const Header = ({ t }: { t: TFunction }) => {
 
   return (
     <HeaderSection>
-      <Container>
-        <Row justify="space-between" align="middle">
-          <LogoContainer to="/" aria-label="homepage">
-            <PlaceholderImage width="40px" height="40px" alt="CalTutors Logo" />
-            <LogoText><span className="cal">Cal</span>Tutors</LogoText>
-          </LogoContainer>
-          <NotHidden>
-            <NavMenu>
-              <MenuItem />
-            </NavMenu>
-            <RightSection>
-              <PhoneNumber href="tel:+19092302186">
-                +1(909) 230 2186
-              </PhoneNumber>
-              <Button onClick={() => window.open('https://docs.google.com/forms/d/e/1FAIpQLSfI4a1EKD2DU-VsxAHU7ME0SbU69dRTLg7AiRF7V1IBpE4htg/viewform', '_blank')}>
-                Contact
-              </Button>
-              <Button primary onClick={() => window.open('https://calendly.com/caltutorsteam/30min', '_blank')}>
-                Schedule
-              </Button>
-            </RightSection>
-          </NotHidden>
-          <Burger onClick={toggleButton}>
-            <Outline />
-          </Burger>
-        </Row>
+      <HeaderContainer>
+        <LogoContainer to="/" aria-label="homepage">
+          <PlaceholderImage width="40px" height="40px" alt="CalTutors Logo" />
+          <LogoText><span className="cal">Cal</span>Tutors</LogoText>
+        </LogoContainer>
+        <NotHidden>
+          <NavMenu>
+            <MenuItem />
+          </NavMenu>
+          <RightSection>
+            <PhoneNumber href="tel:+19092302186">
+              +1(909) 230 2186
+            </PhoneNumber>
+            <Button onClick={() => window.open('https://docs.google.com/forms/d/e/1FAIpQLSfI4a1EKD2DU-VsxAHU7ME0SbU69dRTLg7AiRF7V1IBpE4htg/viewform', '_blank')}>
+              Contact
+            </Button>
+            <Button primary onClick={() => window.open('https://calendly.com/caltutorsteam/30min', '_blank')}>
+              Schedule
+            </Button>
+          </RightSection>
+        </NotHidden>
+        <Burger onClick={toggleButton}>
+          <Outline />
+        </Burger>
         <Drawer closable={false} open={visible} onClose={toggleButton}>
           <Col style={{ marginBottom: "2.5rem" }}>
             <Label onClick={toggleButton}>
@@ -101,11 +99,15 @@ const Header = ({ t }: { t: TFunction }) => {
             +1(909) 230 2186
           </PhoneNumber>
           <ButtonGroup style={{ marginTop: "2rem", flexDirection: "column", gap: "1rem" }}>
-            <Button>Contact</Button>
-            <Button primary>Schedule</Button>
+            <Button onClick={() => window.open('https://docs.google.com/forms/d/e/1FAIpQLSfI4a1EKD2DU-VsxAHU7ME0SbU69dRTLg7AiRF7V1IBpE4htg/viewform', '_blank')}>
+              Contact
+            </Button>
+            <Button primary onClick={() => window.open('https://calendly.com/caltutorsteam/30min', '_blank')}>
+              Schedule
+            </Button>
           </ButtonGroup>
         </Drawer>
-      </Container>
+      </HeaderContainer>
     </HeaderSection>
   );
 };

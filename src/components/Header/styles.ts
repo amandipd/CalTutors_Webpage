@@ -11,12 +11,23 @@ export const HeaderSection = styled("header")`
   background: white;
   padding: 0.75rem 0;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+`;
 
-  .ant-row-space-between {
-    align-items: center;
-    text-align: center;
-    justify-content: space-between;
-    width: 100%;
+export const HeaderContainer = styled("div")`
+  max-width: 80%;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media only screen and (max-width: 1024px) {
+    max-width: calc(100% - 2rem);
+  }
+
+  @media only screen and (max-width: 768px) {
+    max-width: calc(100% - 1rem);
   }
 `;
 
